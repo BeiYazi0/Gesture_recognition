@@ -3,8 +3,6 @@
 
 ## 安装依赖
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
-为方便起见，已将深度学习相关库tensorflow拷贝至本文件所在文件夹下。
-如有需要，可自行安装深度学习相关库。
 
 ## 文件说明
 1. data
@@ -56,8 +54,5 @@ config
         验证图片的总数
     test_img_nums: 
         测试图片的总数
-
-## 运行
-双击run.bat
 
  
