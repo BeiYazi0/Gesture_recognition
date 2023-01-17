@@ -29,30 +29,25 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 创建模型，训练模型。
 
 ## 配置
-config
-    loadmodel: 
-        0: 重新训练模型并保存权重
-        1: 加载已训练过的模型权重
-    dataupdate: 
-        0: 不更新数据集
-        1: 更新数据集(图片集发生变化)
-    showmodel: 
-        0: 不展示网络结构
-        1: 展示网络结构
-    showhistory: 
-        0: 不呈现训练过程的可视化
-        1: 训练过程可视化并保存图片
-    learning_rate: 
-        学习率
-    batch_size:
-        一次训练所抓取的数据样本数量
-    epochs:
-        循环次数
-    train_img_nums: 
-        训练图片的总数
-    valid_img_nums: 
-        验证图片的总数
-    test_img_nums: 
-        测试图片的总数
+
+loadmodel: 0: 重新训练模型并保存权重 1: 加载已训练过的模型权重
+
+dataupdate: 0: 不更新数据集 1: 更新数据集(图片集发生变化)
+
+showmodel: 0: 不展示网络结构 1: 展示网络结构
+
+showhistory: 0: 不呈现训练过程的可视化 1: 训练过程可视化并保存图片
+
+learning_rate: 学习率
+
+batch_size: 一次训练所抓取的数据样本数量
+
+epochs: 循环次数
+
+train_img_nums: 训练图片的总数
+
+valid_img_nums: 验证图片的总数
+
+test_img_nums: 测试图片的总数
 
  
