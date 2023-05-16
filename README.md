@@ -1,6 +1,10 @@
 # Gesture_recognition
 结合注意力机制的卷积神经网络,多维度特征融合的手势识别算法。
 
+参考文献：李楚杨. 基于毫米波雷达的手势识别算法研究[D].电子科技大学,2020.DOI:10.27005/d.cnki.gdzku.2020.003496.
+
+本部分主要实现参考文献的第三章——结合注意力机制的 CNN 多维度特征融合识别算法。
+
 ## 安装依赖
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 
