@@ -1,12 +1,40 @@
 # Gesture_recognition
+
 结合注意力机制的卷积神经网络,多维度特征融合的手势识别算法。
 
 参考文献：李楚杨. 基于毫米波雷达的手势识别算法研究[D].电子科技大学,2020.DOI:10.27005/d.cnki.gdzku.2020.003496.
 
 本部分主要实现参考文献的第三章——结合注意力机制的 CNN 多维度特征融合识别算法。
 
+## 网络结构
+
+|操作|核长|步长|输出维度|备注|
+|---|---|---|---|---|
+|输入|/|/|224x224x3|/|
+|特征提取模块|
+|conv*2|3|1|224x224x32|block_1|
+|maxpool|2|2|112x112x32|block_1|
+|conv*2|3|1|112x112x64|block_2|
+|maxpool|2|2|56x56x64|block_2|
+|conv*3|3|1|56x56x128|block_3|
+|maxpool|2|2|28x28x128|block_3|
+|conv*3|3|1|28x28x256|block_4|
+|maxpool|2|2|14x14x256|block_4|
+|conv*3|3|1|14x14x512|block_5|
+|maxpool|2|2|7x7x512|block_5|
+|特征融合|
+|reshape|/|/|49x512|/|
+|Reshape&transpose|/|/|512x49|/|
+|multiply&Softmax|/|/|512x512|相关性信息|
+|multiply|/|/|49x512|注意力谱|
+|plus&reshape|/|/|7x7x512|残差结构|
+|识别结果输出|
+|conv*3|3|1|7x7x512|/|
+|FC*3|/|/|8|/|
+|Softmax|/|/|8|类别预测概率|
+
 ## 安装依赖
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+pip install -r requirements.txt
 
 ## 文件说明
 1. data
