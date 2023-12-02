@@ -1,4 +1,7 @@
 numpy
 pillow
 matplotlib
+tensorflow
+keras
 -U scikit-learn
+h5py

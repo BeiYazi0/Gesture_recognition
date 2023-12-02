@@ -1,6 +1,6 @@
 import tensorflow as tf
  
-from tensorflow.keras.callbacks import ModelCheckpoint, LearningRateScheduler
+from tensorflow.keras.callbacks import LearningRateScheduler
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, \
      Dense, Reshape, Permute, Dot, Softmax, Lambda, Add, Flatten
