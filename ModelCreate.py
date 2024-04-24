@@ -64,7 +64,7 @@ def create_model(learning_rate):
                    input_shape=(14,14,512), data_format="channels_last")(block_5_C3)
     
     #特征融合模块(基于自注意力的特征融合)
-    a=0.001#可学习参数
+    a = tf.Variable(0.001, name="a")  # a=0.001 可学习参数
     Fc=Reshape((49,512),input_shape=(7,7,512))(F)
     Fc_T=Permute((2,1),input_shape=(49,512))(Fc)
     G=Dot(axes=(2,1))([Fc_T, Fc])
